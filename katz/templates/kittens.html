@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Page Title</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="">
+<style>
+</style>
+<script src=""></script>
+<body>
+
+{% load static %} <!-- this loads the katz/images/ folder as the static folder (where all images are kept)-->
+
+<img src= '{% static "willy1.jpg" %}' alt="willy1_image" style="width:75%">
+<img src= '{% static "willy2.jpg" %}' alt="willy2_image" style="width:75%">
+
+<div class="">
+    <h1>This is the KITTENS page</h1>
+    <p>The available kittens can be listed here</p>
+    <p>This page should change when the database is updated!</p>
+</div>
+
+</body>
+</html>

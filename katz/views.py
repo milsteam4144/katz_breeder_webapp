@@ -1,11 +1,16 @@
 from django.http import HttpResponse
+from django.shortcuts import render
 
 
-# returns the http request for the main page: www.
+# returns the http request for the main page: http://127.0.0.1:8000/
 def index(request):
-    return HttpResponse("Hello, world. You're at the katz index (main webpage).")
+    return render(request, "../templates/index.html")
 
 
-# returns the http request for the "available kittens" page: www.
+# returns the http request for the "available kittens" page: http://127.0.0.1:8000/kittens/
 def kittens(request):
-    return HttpResponse("This is the page where the available kittens will go.")
+    return render(request, "../templates/kittens.html")
+
+# returns the http request for the "register" page: http://127.0.0.1:8000/kittens/
+def register(request):
+    return render(request, "../templates/register.html")

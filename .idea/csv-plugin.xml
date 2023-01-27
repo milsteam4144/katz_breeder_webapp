@@ -17,6 +17,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\katz\templates\kittens.html">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\katz\urls.py">
           <value>
             <Attribute>
@@ -39,6 +46,20 @@
           </value>
         </entry>
         <entry key="\katz_logic\views.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\katz_system\settings.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\katz_system\templates\index.html">
           <value>
             <Attribute>
               <option name="separator" value="," />

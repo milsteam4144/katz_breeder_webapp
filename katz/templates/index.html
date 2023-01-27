@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Page Title</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="">
+<style>
+</style>
+<script src=""></script>
+<body>
+
+
+
+
+<div class="">
+    <h1>This is the index (main) page</h1>
+    <p>It is the first page visitors see!</p>
+    <p>It should be attractive.</p>
+</div>
+
+{% load static %} <!-- this loads the katz/images/ folder as the static folder (where all images are kept)-->
+
+<img src= '{% static "solei1.jpg" %}' alt="solei1_image" style="width:75%">
+
+</body>
+</html>
