@@ -1,26 +1,117 @@
-<!DOCTYPE html>
+<!Doctype html>
 <html lang="en">
-<meta charset="UTF-8">
-<title>Page Title</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" href="">
-<style>
-</style>
-<script src=""></script>
-<body>
+ <head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width,initial-scale=1">
+ <meta name= "Author" content="Martay Williams">
+ <link rel="stylesheet" href="index.css">
+ <script defer src="login-page.js"></script>
+ 
+ 
+ <title> Katz Home Page </title>
+ <style>
+ 
+ 
+ </style>
+ </head>
+ <style>
+     body {
+  background-color:#253da1;
+}
+
+
+.login {
+	float: right;
+	background-color: #d8f9ff;
+	padding: 20px 20px;
+	box-sizing: border-box;
+	border-radius: 20px;
+
+}
+
+h1 {
+	vertical-align: middle;
+	text-align: center;
+	font-family: georgia;
+	border-radius: 20px;
+	background-color: #d8f9ff;
+	padding-top:15px;
+	padding-bottom:15px;
+	width: 30%;
+	 margin-right: auto;
+	margin-left: auto;
+	letter-spacing: 5px;
+}
+.banner {
+background-color:#3792cb;
+padding-top:15px;
+	padding-bottom:15px;
+	border-radius: 20px;
+
+}
+
+th {
+	font-family: georgia;
+	font-size:23px;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	padding-left: 80px;
+	padding-right: 80px;
+	background-color: #d8f9ff;
+	width: 20%;
+	margin-right: auto;
+	margin-left: auto;
+	border: 1px solid #ccc;
+  border-radius: 15px;
+  box-sizing: border-box;
+  letter-spacing: 3px;
+}
 
 
 
-
-<div class="">
-    <h1>This is the index (main) page</h1>
-    <p>It is the first page visitors see!</p>
-    <p>It should be attractive.</p>
-</div>
-
-{% load static %} <!-- this loads the katz/images/ folder as the static folder (where all images are kept)-->
-
-<img src= '{% static "solei1.jpg" %}' alt="solei1_image" style="width:75%">
-
-</body>
-</html>
+ </style>
+ <body>
+ <div class="top">
+ <h1>KATZ</h1>
+ </div>
+		 <div class="banner">
+		 <table>
+		  <tr>
+			<th><a href="about.html">About Us</th>
+			<th><a href="kittens.html">Avaliable Cats</a></th>
+			<th><a href="login_page.html">Login</a></th>
+			<th><a href="register.html">Create An Account</a></th>
+		  </tr>
+		 <table>
+		 </div>
+		 <br><br><br><br>
+		 
+		 
+ 
+ <div class="promo">
+ <h2> 
+	
+ </div>
+ <!-- single cat version 
+ <div class="main_cat_image"><a href="kittens.html">
+ <img src="/Users/19109/katz_project\katz_breeder_webapp\katz/images/willy1.jpg" alt="Willy" height="300" width="400"/>
+ </a>
+ -->
+ 
+<!-- 3 cat version (experimental)-->
+<div class="left_cat_image"><a href="kittens.html">
+ <img src="willy2.jpg" alt="Willy" height="300" width="400"/>
+ </a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+	
+ 
+<a href="kittens.html">
+ <img src="willy3.jpg" alt="Willy" height="300" width="400"/>
+ </a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+ 
+<a href="kittens.html">
+ <img src="\Users\mallo\IdeaProjects\practice_clone\katz_breeder_webapp\katz\images\solei1.jpg" alt="Willy" height="300" width="400"/>
+ </a>
+ </div>
+ 
+ </body>
+ </html>

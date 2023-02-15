@@ -1,22 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+ <head>
 <meta charset="UTF-8">
-<title>Page Title</title>
+ <title> Katz Registration Form </title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" href="">
-<style>
-</style>
-<script src=""></script>
+<link rel="stylesheet" href="register.css">
+<!--<script src=""></script>-->
+<!--{% load static %}  this loads the katz/images/ folder as the static folder (where all images are kept)-->
+</head>
+<script>
+function formValidation() {  
+  var password = document.getElementById("pw").value;
+        var confirmPassword = document.getElementById("pwconfirm").value;
+        if (password != confirmPassword) {
+            alert("Passwords do not match.");
+            return false;
+        }
+        return true;
+    }
+</script>
+
 <body>
+<h1>Create Account</h1>
+ 
+<br>
+ <div class="rightside">
+<h3><a href="index.html">Home</a></h3><br><br><br>
+<h3><a href="FAQ.html">More Help</a></h3><br><br><br>
+<h3><a href="kittens.html">Cats List</a></h3><br><br><br>
+<h3><a href="mailto:someone@some.some">Contact Us</a></h3><br><br><br>
 
-{% load static %} <!-- this loads the katz/images/ folder as the static folder (where all images are kept)-->
 
-
-
-<div class="">
-    <h1>This is the Registration page</h1>
-    <p>Martay's beautiful code can go in this file</p>
 </div>
+ <div class="container">
+ <form name="register" action="" method="post" onsubmit ="return formValidation()">
+  
+  <label for="fname" class="form-label">First name:<br></label> 
+	<input type="text" id="fname" name="fname" required><br>
+	
+	 <label for="lname" class="form-label">Last name:<br></label> 
+	<input type="text" id="lname" name="lname" required><br>
+	
+	<label for="dob" class="form-label">Date of Birth:<br></label> 
+	<input type="text" id="dob" name="dob" placeholder="mm/dd/yyyy" required><br>
+  
+  <label for="address" class="form-label">Street Address:<br></label>
+	<input type="text" id="address" name="address" required><br>
+	
+			<label for="City" class="form-label">City: <br></label>
+			<input type="text" id="city" name="city" required>
+			
+					<label for="state" class="form-label">State:</label>
+					<input type="text" id="state" name="state" required>
+					
+							<label for="zip" class="form-label">Zip code:</label>
+							<input type="text" id="city" name="city" required><br>
+	
+	
+  <label for="phone" class="form-label">Phone Number:<br></label> 
+	<input type="text" id="phone" name="phone" placeholder="###-###-####" required><br>
+
+  <label for="email" class="form-label"> Email Address: <br></label> 
+	<input type="email" id="email" name="email" required>
+	
+	<p>Role: </p>
+	<input type="checkbox" id="Breeder" name="Breeder">
+			  <label for="Breeder"> Breeder </label>
+			  <input type="checkbox" id="Customer" name="Customer">
+			  <label for="Customer"> Customer</label><br><br>
+	
+
+<label for="uname" class="form-label"> Username: <br></label> 
+	<input type="text" id="uname" name="uname" required><br>
+	
+	<label for="pw" class="form-label"> Password: <br></label> 
+	<input type="password" id="pw" name="pw" required><br>
+	
+	<label for="pwconfirm" class="form-label"> Confirm Password: <br></label> 
+	<input type="password" id="pwconfirm" name="pwconfirm" required><br><br><br>
+	
+										  
+										  <input type= "submit" value="Submit"> 
+ 
+ </form>
+ </div>
+
+
 
 </body>
 </html>

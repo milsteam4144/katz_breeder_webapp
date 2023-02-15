@@ -13,4 +13,9 @@ def kittens(request):
 
 # returns the http request for the "register" page: http://127.0.0.1:8000/kittens/
 def register(request):
+    username = "not logged in"
     return render(request, "../templates/register.html")
+
+#returns the http request for the "available kittens" page: http://127.0.0.1:8000/kittens/
+def login_page(request):
+    return render(request, "../templates/login_page.html")
