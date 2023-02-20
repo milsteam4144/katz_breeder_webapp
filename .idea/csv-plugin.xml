@@ -17,6 +17,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\katz\templates\index.html">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\katz\templates\kittens.html">
           <value>
             <Attribute>

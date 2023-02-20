@@ -1,3 +1,4 @@
+from datetime import datetime
 from django.db import models
 
 # Create your models/classes/db tables here.
@@ -5,51 +6,53 @@ from django.db import models
 from django.db.models import UniqueConstraint
 
 
+
+
 class Breeder(models.Model):
-    breederID = models.AutoField(primary_key=True)
-    breeder_name = models.CharField(max_length=50)
-    password = models.CharField(max_length=20)
-    cattery = models.CharField(max_length=60)
-    location = models.TextField()
-    email = models.EmailField()
-    phone = models.CharField(max_length=12)
+    id = models.AutoField(primary_key=True)
+    breeder_name = models.CharField(max_length=50, null=True, blank=True)
+    password = models.CharField(max_length=20, null=True, blank=True)
+    cattery = models.CharField(max_length=60, null=True, blank=True)
+    location = models.TextField(null=True, blank=True)
+    email = models.EmailField(null=True, blank=True)
+    phone = models.CharField(max_length=12, null=True, blank=True)
+
+
+#This class may need to be integrated with the built-in django.contrib.auth app
+class Customer(models.Model):
+    id = models.AutoField(primary_key=True)
+    #Allowing password to be NULL is for development purposes only
+    #Do not use in production
+    password = models.CharField(max_length=20, null=True, blank=True)
+    name = models.CharField(max_length=50, null=True, blank=True)
+    email = models.EmailField(null=True, blank=True)
+    phone = models.CharField(max_length=12, null=True, blank=True)
+    dob = models.DateField(null=True, blank=True)
+    address = models.TextField(null=True, blank=True)
+
 
 class Cat(models.Model):
-    #class Meta:
-        #UniqueConstraint(fields = ['id', 'breederId'], name = 'cat_name')
-        id = models.AutoField(primary_key=True)
-        breederId = models.ForeignKey(Breeder, on_delete=models.CASCADE)
-        name = models.CharField(max_length=50)
-        #birthdate = models.DateTimeField()
-        color = models.CharField(max_length=20)
-        catType = models.CharField(max_length=10)
-        status = models.CharField(max_length=10)
-        pattern  = models.CharField(max_length=20)
-        gender  = models.CharField(max_length=1)
-        mother = models.IntegerField()
-        father = models.IntegerField()
-        images = models.ImageField()
-        personality = models.TextField()
+        #id = models.AutoField(primary_key=True)
+        breederId = models.ForeignKey(Breeder, on_delete=models.CASCADE, default=0)
+        name = models.CharField(max_length=50, null=True, blank=True)
+        birthdate = models.DateTimeField(null=True, blank=True)
+        color = models.CharField(max_length=20, null=True, blank=True)
+        catType = models.CharField(max_length=10, default="breeder")
+        status = models.CharField(max_length=10, default="breeder")
+        pattern  = models.CharField(max_length=20, null=True, blank=True)
+        gender  = models.CharField(max_length=1, null=True, blank=True)
+        mother = models.IntegerField(null=True, blank=True)
+        father = models.IntegerField(null=True, blank=True)
+        images = models.ImageField(null=True, blank=True)
+        personality = models.TextField(null=True, blank=True)
+        #This value will remain NULL until the kitten's status changes to reserved or sold
+        purchaser = models.ForeignKey(Customer, on_delete=models.SET_NULL, null=True)
 
-
-
-class Customer(models.Model):
-    customerID = models.AutoField()
-    catID = models.ForeignKey(Cat, on_delete=models.CASCADE)
-    password = models.CharField(max_length=20)
-    customer_name = models.CharField(max_length=50)
-    email = models.EmailField()
-    phone = models.CharField(max_length=12)
-    birthdate = models.DateField()
-    address = models.TextField()
 
 class Transaction(models.Model):
-    transactionID = models.AutoField()
-    customerID = models.ForeignKey(Customer, on_delete=models.CASCADE)
-    catID = models.ForeignKey(Cat, on_delete=models.CASCADE)
-    type = models.CharField(max_length=15)
-    date = models.DateField()
-
-class Contract(models.Model):
-    transactionID = models.IntegerField()
-    image_file = models.ImageField()
+    id = models.AutoField(primary_key=True)
+    customerID = models.ForeignKey(Customer, on_delete=models.CASCADE, default=0)
+    catID = models.ForeignKey(Cat, on_delete=models.CASCADE, default=0)
+    type = models.CharField(max_length=15, null=True, blank=True)
+    date = models.DateField(null=True, blank=True)
+    image_file = models.ImageField(null=True, blank=True)

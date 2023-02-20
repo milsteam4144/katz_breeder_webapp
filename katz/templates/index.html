@@ -6,6 +6,9 @@
  <meta name= "Author" content="Martay Williams">
  <link rel="stylesheet" href="index.css">
  <script defer src="login-page.js"></script>
+
+     <!--Load the static variable that refers to the images folder-->
+     {% load static %}
  
  
  <title> Katz Home Page </title>
@@ -77,19 +80,18 @@ th {
 		 <div class="banner">
 		 <table>
 		  <tr>
-			<th><a href="about.html">About Us</th>
+			<th><a href="about.html">About Us</a></th>
 			<th><a href="kittens.html">Avaliable Cats</a></th>
 			<th><a href="login_page.html">Login</a></th>
 			<th><a href="register.html">Create An Account</a></th>
 		  </tr>
-		 <table>
+		 </table>
 		 </div>
 		 <br><br><br><br>
 		 
 		 
  
  <div class="promo">
- <h2> 
 	
  </div>
  <!-- single cat version 
@@ -100,16 +102,16 @@ th {
  
 <!-- 3 cat version (experimental)-->
 <div class="left_cat_image"><a href="kittens.html">
- <img src="willy2.jpg" alt="Willy" height="300" width="400"/>
+    <img src="{% static 'merlin1.jpg' %}" alt="My image" height="300" width="400">
  </a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 	
  
 <a href="kittens.html">
- <img src="willy3.jpg" alt="Willy" height="300" width="400"/>
+    <img src="{% static 'merlin2.jpg' %}" alt="My image" height="300" width="400">
  </a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
  
 <a href="kittens.html">
- <img src="\Users\mallo\IdeaProjects\practice_clone\katz_breeder_webapp\katz\images\solei1.jpg" alt="Willy" height="300" width="400"/>
+    <img src="{% static 'merlin3.jpg' %}" alt="My image" height="300" width="400">
  </a>
  </div>
  
