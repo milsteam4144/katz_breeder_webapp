@@ -3,49 +3,42 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
-        <entry key="\katz\apps.py">
+        <entry key="C:\Users\mallo\OneDrive\Desktop\katz_project_files\venmo_practice.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\katz_breeder_webapp\katz\models.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\katz_breeder_webapp\katz\templates\kittens.html">
           <value>
             <Attribute>
               <option name="separator" value=":" />
             </Attribute>
           </value>
         </entry>
-        <entry key="\katz\models.py">
+        <entry key="\katz_breeder_webapp\katz\templates\login_page.html">
           <value>
             <Attribute>
               <option name="separator" value=":" />
             </Attribute>
           </value>
         </entry>
-        <entry key="\katz\urls.py">
+        <entry key="\katz_breeder_webapp\katz\views.py">
           <value>
             <Attribute>
-              <option name="separator" value="," />
+              <option name="separator" value=":" />
             </Attribute>
           </value>
         </entry>
-        <entry key="\katz\views.py">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\katz_logic\urls.py">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\katz_logic\views.py">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\katz_system\urls.py">
+        <entry key="\katz_breeder_webapp\katz_system\settings.py">
           <value>
             <Attribute>
               <option name="separator" value="," />
